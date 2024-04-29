@@ -1,0 +1,446 @@
+/* 清除浏览器样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    /* color: #000; */
+    color: #7D6464;
+}
+
+
+/* -------------------- 顶部 -------------------- */
+
+.header {
+    /* 弹性盒子 */
+    display: flex;
+    width: auto;
+    height: 80px;
+}
+
+.headerLeft {
+    /* 左上角logo */
+    display: flex;
+    width: 313px;
+    height: 80px;
+    /* 分割线 */
+    border-style: solid;
+    border-color: #F5F5F5;
+    /* 上右下左 */
+    border-width: 0 1px 0 0;
+}
+.headerLeft img {
+    width: 249px;
+    height: 80px;
+    margin: 0 0 0 0;
+}
+.headerRight {
+    /* 右上角搜索和登入 */
+    display: flex;
+    width: 1608px;
+    height: 80px;
+    /* 子元素垂直居中 */
+    align-items: center;
+    background-color: white;
+}
+
+h1 {
+    display: flex;
+    margin-left: 30px;
+}
+
+.login {
+    /* 登录 */
+    display: flex;
+    width: 45px;
+    height: 45px;
+    /* 变圆 */
+    border-radius: 50%;
+    /* 子元素向右靠 */
+    margin-left: auto;
+    margin-right: 20px;
+    background: url(../images/index/profile.png) no-repeat;
+    background-size: 45px 45px;
+}
+
+
+/* -------------------- 主体内容 -------------------- */
+
+.container {
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+
+/* -------------------- 左侧导航 -------------------- */
+
+.leftColumn {
+    display: flex;
+    width: 313px;
+    height: 500px;
+    /* background-color: #F5F5F5; */
+    /* 居中 */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box {
+    display: block;
+    width: 100%;
+    height: 84px;
+    /* background-color: aquamarine; */
+    border-radius: 5px;
+    position: relative;
+    align-items: center;
+}
+
+.box ion-icon {
+    font-size: 40px;
+    position: absolute;
+    margin: 15px 0 0 13px;
+    /* color: #7D6464; */
+}
+
+.box span {
+    position: relative;
+    top: 22px;
+    left: 80px;
+    font: 500 20px '';
+    /* color: #7D6464; */
+}
+
+.add {
+    background-color: #FEF7F3;
+    color: #F56119;
+}
+
+
+/* 悬停变色 */
+
+.box:hover {
+    /* 悬停时单个选项框变色 */
+    background-color: #FEF7F3;
+    /* 悬停时字体颜色 */
+    color: #F56119;
+}
+
+
+/* 点击时变色 */
+
+.box:focus {
+    /* 点击时单个选项框变色 */
+    background-color: #FEF7F3;
+    /* 点击时字体颜色 */
+    color: #F56119;
+}
+
+
+/* -------------------- 右侧内容 -------------------- */
+
+.rightColumn {
+    display: flex;
+    flex-wrap: wrap;
+    width: 83.7%;
+    /* width: 106%; */
+    /* height: 100%; */
+    height: auto;
+    background-color: #F5F5F5;
+    position: relative;
+}
+
+.first-section {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    width: 100%;
+    height: 500px;
+    margin: 20px 10px;
+    /* margin-bottom: 40px; */
+    /* background-color: #00a1d6; */
+}
+
+
+/* -------------------- 左侧轮播图 -------------------- */
+
+.leftSection {
+    width: 70%;
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px gainsboro;
+    background-color: white;
+}
+
+h2 {
+    margin: 40px 0 20px 50px;
+}
+
+
+/* 轮播图 */
+
+.autoShow {
+    position: relative;
+    width: 90%;
+    height: 75%;
+    margin-left: 50px;
+    box-shadow: 3px 3px 3px gainsboro;
+    background-color: pink;
+    opacity: 0;
+    transition: opacity 0.2s;
+    overflow: hidden;
+}
+
+.autoshow-wrapper img {
+    width: 810px;
+    height: 380px;
+}
+
+.autoshow-wrapper {
+    width: 810px;
+    position: relative;
+}
+
+.autoshow-wrapper a {
+    position: absolute;
+    /* 图片变换速度 */
+    transition: transform 0.2s;
+}
+
+.tigger {
+    position: absolute;
+    display: flex;
+    bottom: 10px;
+    right: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tigger span {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    /* 边框为透明 */
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background-color: #fff;
+    vertical-align: middle;
+    /* 光标变成手 */
+    cursor: pointer;
+    /* 悬停后会变大 */
+    transition: all 0.2s;
+    margin-left: 10px;
+    z-index: 10;
+    /* linear匀速 */
+    transition: all linear 0.2s;
+}
+
+.tigger span:hover {
+    /* 沿X轴放大transform: scale(x, y) */
+    transform: scale(1.2);
+    border: 2px solid #fff;
+    background-color: #00a1d6;
+}
+
+.autoShow .tigger span.on {
+    border: 0;
+    border-color: transparent;
+    background-color: transparent;
+    background-image: url(../images/index/pointer.png);
+    /* 背景图片的大小 */
+    background-size: 100% 100%;
+    /* 图片保留自身大小不平铺 */
+    background-repeat: no-repeat;
+    transform: scale(3);
+}
+
+
+/* -------------------- 右侧轮播图 -------------------- */
+
+.rightSection {
+    width: 24%;
+    margin-left: 15px;
+    border-radius: 10px;
+    /* background-color: red; */
+    box-shadow: 0 0 5px 5px gainsboro;
+    background-color: white;
+}
+
+.autoShow1 {
+    position: relative;
+    width: 85%;
+    height: 75%;
+    margin-left: 20px;
+    box-shadow: 3px 3px 3px gainsboro;
+    background-color: pink;
+    opacity: 0;
+    transition: opacity 0.2s;
+    overflow: hidden;
+}
+
+.autoshow-wrapper1 img {
+    width: 400px;
+    height: 389px;
+}
+
+.autoshow-wrapper1 {
+    width: 400px;
+    position: relative;
+}
+
+.autoshow-wrapper1 a {
+    position: absolute;
+    /* 图片变换速度 */
+    transition: transform 0.2s;
+}
+
+.tigger1 {
+    position: absolute;
+    display: flex;
+    bottom: 10px;
+    right: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tigger1 span {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    /* 边框为透明 */
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background-color: #fff;
+    /* 垂直对齐方式 */
+    vertical-align: middle;
+    /* 光标变成手 */
+    cursor: pointer;
+    /* 悬停后会变大 */
+    transition: all 0.2s;
+    margin-left: 10px;
+    z-index: 10;
+    /* linear匀速 */
+    transition: all linear 0.2s;
+}
+
+.tigger1 span:hover {
+    /* 沿X轴放大transform: scale(x, y) */
+    transform: scale(1.2);
+    border: 2px solid #fff;
+    background-color: #00a1d6;
+}
+
+.autoShow1 .tigger1 span.on {
+    border: 0;
+    border-color: transparent;
+    background-color: transparent;
+    background-image: url(../images/index/pointer.png);
+    /* 背景图片的大小 */
+    background-size: 100% 100%;
+    /* 图片保留自身大小不平铺 */
+    background-repeat: no-repeat;
+    transform: scale(3);
+}
+
+
+/*
+.rightColumn .changePag {
+    display: flex;
+    border: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+} */
+
+
+/* -------------------- 底部内容 -------------------- */
+
+.second-section {
+    display: block;
+    width: 95.3%;
+    height: 500px;
+    margin-left: 30px;
+    margin-bottom: 35px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px gainsboro;
+    background-color: white;
+}
+
+.autoShow2 {
+    position: relative;
+    width: 92%;
+    height: 75%;
+    margin-left: 50px;
+    box-shadow: 3px 3px 3px gainsboro;
+    background-color: pink;
+    opacity: 0;
+    transition: opacity 0.2s;
+    overflow: hidden;
+}
+
+.autoshow-wrapper2 img {
+    width: 1150px;
+    height: 400px;
+}
+
+.autoshow-wrapper2 {
+    width: 1150px;
+    position: relative;
+}
+
+.autoshow-wrapper2 a {
+    position: absolute;
+    /* 图片变换速度 */
+    transition: transform 0.2s;
+}
+
+.tigger2 {
+    position: absolute;
+    display: flex;
+    bottom: 10px;
+    right: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tigger2 span {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    /* 边框为透明 */
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background-color: #fff;
+    /* 垂直对齐方式 */
+    vertical-align: middle;
+    /* 光标变成手 */
+    cursor: pointer;
+    /* 悬停后会变大 */
+    transition: all 0.2s;
+    margin-left: 10px;
+    z-index: 10;
+    /* linear匀速 */
+    transition: all linear 0.2s;
+}
+
+.tigger2 span:hover {
+    /* 沿X轴放大transform: scale(x, y) */
+    transform: scale(1.2);
+    border: 2px solid #fff;
+    background-color: #00a1d6;
+}
+
+.autoShow2 .tigger2 span.on {
+    border: 0;
+    border-color: transparent;
+    background-color: transparent;
+    background-image: url(../images/index/pointer.png);
+    /* 背景图片的大小 */
+    background-size: 100% 100%;
+    /* 图片保留自身大小不平铺 */
+    background-repeat: no-repeat;
+    transform: scale(3);
+}

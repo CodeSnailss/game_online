@@ -1,0 +1,363 @@
+/* 清除浏览器样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    /* color: #000; */
+    color: #7D6464;
+}
+
+ul,
+il {
+    list-style: none;
+}
+
+
+/* -------------------- 顶部 -------------------- */
+
+.header {
+    /* 弹性盒子 */
+    display: flex;
+    width: 100%;
+    height: 80px;
+}
+
+.headerLeft {
+    /* 左上角logo */
+    display: flex;
+    /* position: fixed; */
+    width: 313px;
+    height: 80px;
+    /* 分割线 */
+    border-style: solid;
+    border-color: #F5F5F5;
+    /* 上右下左 */
+    border-width: 0 1px 0 0;
+}
+
+.headerLeft img {
+    width: 249px;
+    height: 80px;
+    margin: 0 0 0 0;
+}
+
+.headerRight {
+    /* 右上角搜索和登入 */
+    display: flex;
+    width: 1608px;
+    height: 80px;
+    /* 子元素垂直居中 */
+    align-items: center;
+    background-color: white;
+}
+
+h1 {
+    display: flex;
+    margin-left: 50px;
+}
+
+.search {
+    display: flex;
+    margin-left: 20px;
+    /* background-color: red; */
+}
+
+.searchLab {
+    display: flex;
+    align-items: center;
+}
+
+.input-text {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    padding-left: 20px;
+    background-color: #e7e7e7;
+    /* 取消选中搜索框时的外边框 */
+    outline: none;
+    line-height: 40px;
+    font-size: 20px;
+    color: black;
+}
+
+.searchButton {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-left: 10px;
+}
+
+#searchbutton {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 2px gainsboro;
+    background-color: transparent;
+    /* 光标变成手 */
+    cursor: pointer;
+    z-index: 1;
+}
+
+.searchButton ion-icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 5px;
+    z-index: 0;
+}
+
+.login {
+    /* 登录 */
+    display: flex;
+    width: 45px;
+    height: 45px;
+    /* 变圆 */
+    border-radius: 50%;
+    /* 子元素向右靠 */
+    margin-left: auto;
+    margin-right: 20px;
+    background: url(../images/index/profile.png) no-repeat;
+    background-size: 45px 45px;
+}
+
+
+/* -------------------- 主体内容 -------------------- */
+
+.container {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+
+/* -------------------- 左侧导航 -------------------- */
+
+.leftColumn {
+    display: flex;
+    width: 313px;
+    height: 500px;
+    /* background-color: #F5F5F5; */
+    /* 居中 */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box {
+    display: block;
+    width: 100%;
+    height: 84px;
+    /* background-color: aquamarine; */
+    border-radius: 5px;
+    position: relative;
+    align-items: center;
+}
+
+.box ion-icon {
+    font-size: 40px;
+    position: absolute;
+    margin: 15px 0 0 13px;
+    /* color: #7D6464; */
+}
+
+.box span {
+    position: relative;
+    top: 22px;
+    left: 80px;
+    font: 500 20px '';
+    /* color: #7D6464; */
+}
+
+.add {
+    background-color: #FEF7F3;
+    color: #F56119;
+}
+
+
+/* 悬停变色 */
+
+.box:hover {
+    /* 悬停时单个选项框变色 */
+    background-color: #FEF7F3;
+    /* 悬停时字体颜色 */
+    color: #F56119;
+}
+
+
+/* 点击时变色 */
+
+.box:focus {
+    /* 点击时单个选项框变色 */
+    background-color: #FEF7F3;
+    /* 点击时字体颜色 */
+    color: #F56119;
+}
+
+
+/* -------------------- 右侧内容 -------------------- */
+
+.rightColumn {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    /* width: 106%; */
+    width: 1600px;
+    /* height: 100%; */
+    height: auto;
+    background-color: #F5F5F5;
+    position: relative;
+}
+
+.store {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 30px;
+    /* background-color: blue; */
+}
+
+.game {
+    display: flex;
+    position: relative;
+    width: 270px;
+    height: 300px;
+    margin: 0 10px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px gainsboro;
+    background-color: white;
+}
+
+img {
+    display: flex;
+    margin: 20px 20px 10px 20px;
+    width: 230px;
+    height: 150px;
+}
+
+.gameInfo {
+    display: flex;
+    width: 240px;
+    height: 35%;
+    position: absolute;
+    top: 180px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.gameTitel {
+    position: relative;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+.gameInfo span {
+    font-weight: 300;
+    color: #F56119;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.collection {
+    margin-bottom: 10px;
+}
+
+.gameInfo ion-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.favorite {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px gainsboro;
+    position: absolute;
+    top: 55px;
+    left: 190px;
+    background-color: transparent;
+}
+
+.favorite ion-icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 6px;
+    left: 5.5px;
+}
+
+
+/* 点击后使收藏变色 */
+
+.favoriteClick:focus {
+    color: red;
+}
+
+.page-bar {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.page-num-ul li {
+    margin-left: 300px;
+    float: left;
+}
+
+.page-num-ul li a {
+    display: inline-block;
+    padding: 3px 5px;
+    margin: 0px 3px;
+    border: 1px solid #b8b8b8;
+}
+
+.page-num-ul a:hover,
+.page-num-ul .thisclass {
+    border: 1px solid #c5063f;
+    background-color: #c5063f;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.page-key {
+    width: 50px;
+}
+
+.page-btn {
+    border: 1px solid #b8b8b8;
+    background-color: #fff3f8;
+    display: inline-block;
+    width: 52px;
+    height: 25px;
+    line-height: 25px;
+    font-weight: 20;
+}
+
+.page-go-form {
+    position: absolute;
+    display: inline-block;
+    right: 50px;
+    top: 0px;
+}
+
+.page-go-form input,
+label,
+button {
+    margin: 0px 5px;
+}
+
+/* 收藏失败信息 */
+.info{
+    color: red;
+    font-weight:bold;
+}

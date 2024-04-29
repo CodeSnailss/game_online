@@ -1,0 +1,323 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+body{
+    width: 960px;
+    height: 600px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+/**************************************************开始界面*********************************************************/
+#ks{
+    width: 960px;
+    height: 600px;
+    background: url("background/background-3.jpg");
+    margin: auto;
+    display: block;
+}
+/**********游戏名称**********/
+#ks .mc{
+    width: 580px;
+    height: 100px;
+    /*background-color: gold;*/
+    margin: 0 auto;
+    font-size: 100px;
+    color: #ffffff;
+}
+
+/**********开始按钮**********/
+#ks .an button{
+    width: 200px;
+    height: 50px;
+    background-color: #f19e0d;
+    position: relative;
+    top: 350px;
+    left: 375px;
+    font-size: 25px;
+    cursor:pointer;
+}
+/**********游戏说明**********/
+#ks .sm{
+    width: 400px;
+    height: 300px;
+    /*background-color: deeppink;*/
+    margin: -40px 0 0 250px;
+    font-size: 17px;
+    color: azure;
+    overflow: hidden;
+}
+#ks .sm .sm1{
+    width: 400px;
+    height: 460px;
+    position: relative;
+    top: 200px;
+    cursor:pointer;
+    /*background-color: firebrick;*/
+    -webkit-animation-name:move;
+    -webkit-animation-duration:20s;
+    animation-iteration-count:999;
+    animation-timing-function: linear;
+}
+#ks .sm .sm1:hover{
+    animation-play-state: paused;
+}
+@keyframes move{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateY(-420px);
+    }
+}
+#ks .sm .sm1 ul li{
+    line-height: 18px;
+    list-style-type: none;
+}
+/**************************************************游戏界面*********************************************************/
+#yx{
+    width: 960px;
+    height: 600px;
+    background: url("background/background-1.jpg");
+    margin: 0 auto;
+    position: relative;
+    display: none;
+    overflow: hidden;
+}
+#yx .main{
+    width: 100px;
+    height: 100px;
+    /*background-color: firebrick;*/
+    position: absolute;
+    left: 0;
+    top: 200px;
+    z-index: 1;
+}
+#yx .planet{
+    width: 100%;
+    height: 100%;
+    /*background-color: gold;*/
+    position: absolute;
+    z-index: 0;
+}
+#yx .jm4{
+    width: 20px;
+    height: 6px;
+    position: absolute;
+    /*background-color: #ff2b85;*/
+    top: 296px;
+    left: 94px;
+}
+#bullets,#enemy,#xx{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.b{
+    width: 14px;
+    height: 6px;
+    position: absolute;
+}
+.e{
+    position: absolute;
+}
+.z{
+    position: absolute;
+}
+#yx .jm6{
+    width: 50px;
+    height: 50px;
+    /*background-color: fuchsia;*/
+    position: absolute;
+    left: 200px;
+    top: 10px;
+}
+#yx .jm6 img{
+    width: 35px;
+    height: 45px;
+}
+#yx .jm6 .jm7{
+    width: 200px;
+    height: 8px;
+    /*background-color: violet;*/
+    border: #f1be65 solid 2px;
+    position: relative;
+}
+#yx .jm6 .jm7 .schedule{
+    width: 198px;
+    height: 6px;
+    /*background-color: #f1be65;*/
+    position: absolute;
+    top: 1px;
+}
+#jdt{
+    width: 198px;
+    height: 6px;
+    background-color: #f1be65;
+    position: absolute;
+    top: 1px;
+}
+#span{
+    color: white;
+    position: absolute;
+    left: -30px;
+}
+#p{
+    position: absolute;
+    top: -45px;
+    left: 180px;
+    color: white;
+    /*font-size: 20px;*/
+}
+.rl{
+    position: absolute;
+}
+#yx #scores{
+    width: 200px;
+    height: 40px;
+    /*background-color: darkblue;*/
+    /*border: #f19e0d solid 3px;*/
+    color: #ffffff;
+    /*//font-size: 30px;*/
+    position: absolute;
+    left: 500px;
+    top: 20px;
+
+}
+#yx .jm9{
+    width: 50px;
+    height: 50px;
+    /*background-color: darkblue;*/
+    position: absolute;
+    left: 800px;
+    top:20px;
+}
+#yx #jm9{
+    color: white;
+    /*font-size: 20px;*/
+}
+#yx #jm9 input{
+    width: 70px;
+    height: 30px;
+    position: absolute;
+    border: #f19e0d solid 3px;
+    left: 60px;
+    top: 5px;
+    font-size: 18px;
+
+}
+#yx .jm9 img{
+    width: 100%;
+    height: 100%;
+}
+
+#yx .jm11{
+    width: 150px;
+    height: 50px;
+    /*background-color: rgba(255, 255, 255, 0.5);*/
+    position: absolute;
+    top: 530px;
+    left: 300px;
+    cursor: pointer;
+}
+#yx .jm11 img:nth-child(2){
+    position: absolute;
+    left: 90px;
+}
+#yx .jm12{
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    color: #ffffff;
+    /*font-size: 50px;*/
+    position: absolute;
+    left: 600px;
+    top: 530px;
+}
+#jpzt{
+    cursor: pointer;
+}
+#yx .jm13{
+    width: 150px;
+    height: 150px;
+    /*background-color: rgba(255, 255, 255, 0.1);*/
+    position: absolute;
+    top: 430px;
+    left: 730px;
+    z-index: 1;
+}
+#yx .jm13 img:nth-child(1){
+    position: absolute;
+    left: 50px;
+    cursor: pointer;
+}
+#yx .jm13 img:nth-child(2){
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    cursor: pointer;
+}
+#yx .jm13 img:nth-child(3){
+    position: absolute;
+    left: 50px;
+    top: 100px;
+    cursor: pointer;
+}
+#yx .jm13 img:nth-child(4){
+    position: absolute;
+    top: 50px;
+    cursor: pointer;
+}
+.f{
+    position: absolute;
+}
+
+#nickname{
+    width: 960px;
+    height: 600px;
+    background: url("background/background-1.jpg");
+    margin: 0 auto;
+    display: none;
+}
+#nickname .nickname1{
+    width: 600px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 0 auto;
+    position: relative;
+}
+#nickname .nickname1 a:nth-child(1){
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 145px;
+}
+
+#nickname .nickname1 span{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    border: white solid 3px;
+    background-color: #f1be65;
+    top: 400px;
+    left: 225px;
+    cursor: pointer;
+}
+#df{
+    width: 200px;
+    height: 100px;
+    /*background-color: yellow;*/
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    font-size: 20px;
+
+}

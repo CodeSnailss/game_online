@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mzj.dao.FavoriteMapper">
+    <select id="getFavorite" resultMap="userAndGames">
+        select f.uemail uemail ,g.gid gid ,g.name gname ,g.code gcode ,g.url gurl ,g.players gplayers, g.price gprice
+        from favorite f,game g
+        where f.uemail = #{uemail} and g.code = f.gcode
+    </select>
+    <resultMap id="userAndGames" type="Favorite">
+        <result property="uemail" column="uemail"/>
+        <collection property="games" ofType="Game">
+            <result property="gid" column="gid"/>
+            <result property="name" column="gname"/>
+            <result property="code" column="gcode"/>
+            <result property="url" column="gurl"/>
+            <result property="players" column="gplayers"/>
+            <result property="price" column="gprice"/>
+        </collection>
+    </resultMap>
+</mapper>

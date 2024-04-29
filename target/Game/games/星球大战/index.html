@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="xqd.css">
+    <script src="xqd.js"></script>
+</head>
+<body>
+<!--开始界面-->
+<div id="ks">
+    <!--游戏名称-->
+    <div class="mc">STAR WARS</div>
+
+    <!--开始按钮-->
+    <div id="an" class="an">
+        <button type="submit">Start Game</button>
+    </div>
+    <!--游戏说明-->
+    <div class="sm">
+        <div class="sm1">
+            <ul>
+                <li>
+                    How to Play Star Battle.<br>
+                    <br>
+                    1. Move the spaceship using the sensible areas in the screen;<br>
+                    2. The timer present the time lapsed;<br>
+                    3. The fuel counter show the remain fuel;<br>
+                    4. During the flight, the spaceship needs to destroy the asteroids and enemy spaceships that are presented in the space;<br>
+                    5. You can shoot pressing Space Bar;<br>
+                    6. If the spaceship hits a asteroid or another spaceship, you lose 15 points of fuel;<br>
+                    7. Enemy spaceship needs 1 shot to be destroyed, you will get 5 points for each enemy destroyed;<br>
+                    8. Asteroid needs 2 shots to be destroyed, you will get 10 points for each asteroid destroyed;<br>
+                    9. If you destroy a friendly spaceship, you lose 10 points;<br>
+                    10. During the flight, the spaceship needs to collect fuel in the space;<br>
+                    11. You can pause the game clicking in a button pause, or pressing the letter "p";<br>
+                    12. Go beyond all limits;<br>
+                    Battle in Space with Star Battle Championship...<br>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--游戏界面-->
+<div id="yx">
+    <!--1.己方飞船-->
+    <div id="main" class="main">
+        <img src="img/main3.png" alt="">
+    </div>
+    <!--2.背景中的行星-->
+    <div class="planet" id="xx">
+<!--        <img src="background%20planet/010-uranus.png" alt="">-->
+    </div>
+    <!--3.敌方 、友机飞船、陨石-->
+    <div id="enemy"></div>
+    <!--敌机发射子弹-->
+    <div id="djzds"></div>
+    <!--4.子弹-->
+    <div id="bullets"></div>
+    <!--6.燃料图标-->
+    <div class="jm6" >
+        <img id="tubiao" src="img/rl1.png" alt="">
+        <!-- 7.燃料的进度条-->
+        <div class="jm7">
+            <aside id="jdt"></aside>
+            <p id="p"><span id="span">100</span>%</p>
+        </div>
+<!--        <div id="rl"></div>-->
+    </div>
+    <div id="rl"></div>
+    <!--8.得分-->
+    <div id="scores">
+        <p>Scores:<span>0</span></p>
+    </div>
+    <!--9.计时器-->
+    <div class="jm9" id="jm9">
+        <input type="text" id="jsq" value="00:00:00" readonly>
+        <img src="img/timer.png" alt="">
+    </div>
+    <!--11.字体大小-->
+    <div class="jm11">
+        <img src="img/font%20plus.png" alt="" id="sizeup">
+        <img src="img/font%20minus.png" alt=""  id="sizedown">
+    </div>
+    <!--12.游戏暂停-->
+    <div class="jm12">
+        <img src="img/zanting.png" alt="" id="jpzt">
+    </div>
+<!--    13.己方飞船的鼠标控制区-->
+    <div class="jm13">
+        <img src="img/top.png" alt="" id="top">
+        <img src="img/right.png" alt="" id="right">
+        <img src="img/bottom.png" alt="" id="bottom">
+        <img src="img/left.png" alt="" id="left">
+    </div>
+
+</div>
+<!--输入昵称界面-->
+<div id="nickname">
+     <div class="nickname1">
+          <a href="">Game &nbsp Over</a><br><br><br><br>
+         <div id="df"></div>
+         <span id="yxjs">RESTART</span>
+     </div>
+</div>
+</body>
+</html>

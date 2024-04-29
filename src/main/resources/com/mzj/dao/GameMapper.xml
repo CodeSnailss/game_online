@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mzj.dao.GameMapper">
+    <select id="queryGame" resultType="Game" parameterType="map">
+        select * from game
+        <if test="name != null">
+            where name like concat('%',#{name},'%')
+        </if>
+        <if test="players != null">
+            order by players
+        </if>
+        <if test="pageSize != null">
+            limit #{startIndex},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getCount" parameterType="map" resultType="java.lang.Integer">
+        select count(1) as count from game
+        <where>
+            <if test="name != null">
+                name like concat('%',#{name},'%')
+            </if>
+        </where>
+    </select>
+</mapper>
